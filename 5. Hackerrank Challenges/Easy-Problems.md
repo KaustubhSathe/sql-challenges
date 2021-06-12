@@ -66,14 +66,12 @@
 10. **Weather Observation Station 5**
 
     ```sql
-    select city, length(city) from station
-    order by length(city),city asc
-    limit 1;
-    select city, length(city) from station
-    order by length(city) desc
-    limit 1;
+    select top 1 city, length(city) from station
+    order by length(city),city asc;
+    select top 1 city, length(city) from station
+    order by length(city) desc;
     ```
-
+    
 11. **Weather Observation Station 6**
 
     ```sql
@@ -240,7 +238,7 @@
 
     ```sql
     SELECT ROUND(MAX(LAT_N),4) FROM STATION
-    WHERE LAT_N < 137.2345;s
+    WHERE LAT_N < 137.2345;
     ```
 
 33. **Weather Observation Station 15**
